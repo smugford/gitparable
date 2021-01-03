@@ -1,0 +1,7 @@
+After using branches for a while you notice that they can serve two purposes. First, they can act as movable pointers to snapshots so that you can keep track of the branch tips. Second, they can be pointed at a single snapshot and never move.
+
+The first use case allows you to keep track of ongoing development, things like “Release Maintenance”. The second case is useful for labeling points of interest, like “Version 1.0” and “Version 1.0.1”.
+
+Mixing both of these uses into a single file feels messy. Both types are pointers to snapshots, but one moves and one doesn’t. For the sake of clarity and elegance, you decide to create another file called tags to contain pointers of the second type.
+
+Keeping these two inherently different pointers in separate files will help you from accidentally treating a branch as a tag or vice versa.
